@@ -1,0 +1,104 @@
+{
+  "model_file": "model.json",
+  "feature_columns": [
+    "material_family",
+    "complexity_score",
+    "tolerances",
+    "length",
+    "estimated_part_to_stock_volume_ratio",
+    "n_slots",
+    "n_holes",
+    "estimated_machining_time",
+    "quantity",
+    "diagonal",
+    "machining_overhead",
+    "tool_complexity",
+    "log_part_volume",
+    "log_stock_volume"
+  ],
+  "material_families": [
+    "Aluminum",
+    "Carbon Steel",
+    "Plastic",
+    "Stainless Steel",
+    "Titanium"
+  ],
+  "training_ranges": {
+    "price": {
+      "min": 45.0,
+      "max": 5280.0
+    },
+    "length": {
+      "min": 14.6,
+      "max": 1866.133
+    },
+    "diagonal": {
+      "min": 20.326337594362645,
+      "max": 1869.0962789377647
+    },
+    "part_volume": {
+      "min": 111.40087549629384,
+      "max": 4138649.822116077
+    },
+    "estimated_stock_volume": {
+      "min": 740.0500000000003,
+      "max": 415189492.2838975
+    },
+    "estimated_part_to_stock_volume_ratio": {
+      "min": 0.004758,
+      "max": 0.9962354940111252
+    },
+    "n_holes": {
+      "min": 0.0,
+      "max": 490.0
+    },
+    "n_slots": {
+      "min": 0.0,
+      "max": 33.0
+    },
+    "complexity_score": {
+      "min": 2.0,
+      "max": 8.0
+    },
+    "tolerances": {
+      "min": 0.02,
+      "max": 2.54
+    },
+    "quantity": {
+      "min": 1.0,
+      "max": 48.0
+    },
+    "estimated_machining_time": {
+      "min": 0.02428,
+      "max": 7.55505
+    },
+    "setup_count": {
+      "min": 1.0,
+      "max": 6.0
+    },
+    "tool_changes_count": {
+      "min": 1.0,
+      "max": 30.0
+    }
+  },
+  "price_cap": 2612.4,
+  "target_transform": "log1p",
+  "n_train": 250,
+  "n_test": 63,
+  "train_metrics": {
+    "mae": 115.87049755859375,
+    "rmse": 294.5687195720836,
+    "mape": 13.771788720262961,
+    "r2": 0.8479078361866741,
+    "weighted_mape": 14.861022087972172
+  },
+  "test_metrics": {
+    "mae": 187.3149434649755,
+    "rmse": 272.0185188389335,
+    "mape": 42.89938808475869,
+    "r2": 0.8473695981844269,
+    "weighted_mape": 24.42631528045508
+  },
+  "xgboost_version": "3.4.0",
+  "trained_at": "2026-08-17T18:25:33+00:00"
+}
