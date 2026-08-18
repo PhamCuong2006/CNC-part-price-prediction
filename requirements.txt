@@ -1,12 +1,9 @@
 # Runtime dependencies for src/streamlit_app.py (Streamlit Cloud deployment).
-# scikit-learn is intentionally omitted: it's only used by train_model.py to
-# fit the model, not by the deployed app, which loads a pre-trained
-# artifacts/model.json. Add scikit-learn==1.9.0 if you need retraining in
-# the same deployment environment.
 streamlit==1.61.1
 pandas==3.0.3
 numpy==2.5.1
 xgboost==3.4.0
+scikit-learn==1.9.0
 plotly==6.9.0
 cadquery==2.8.0
 cadquery-ocp==7.9.3.1.1
